@@ -1,0 +1,514 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TiCardscanner
+import AVFoundation
+import AudioToolbox
+import CoreGraphics
+import CoreImage
+import Foundation
+import ObjectiveC
+import Swift
+@_exported import TiCardscanner
+import TitaniumKit
+import UIKit
+import Vision
+import VisionKit
+import _Concurrency
+public class Observable<T> {
+  public var notifcationBehaviour: TiCardscanner.Observable<T>.ObserveNotifcationBehaviour
+  public var syncingTokens: [Swift.AnyObject]
+  public var value: T {
+    get
+    set
+  }
+  public init(_ value: T)
+  public func observeWithChange(priority: TiCardscanner.ObserverPriority = .standard, _ action: @escaping (TiCardscanner.ValueChange<T>) -> Swift.Void) -> Swift.AnyObject
+  public func observeFromNextValueWithChange(priority: TiCardscanner.ObserverPriority = .standard, _ action: @escaping (TiCardscanner.ValueChange<T>) -> Swift.Void) -> Swift.AnyObject
+  public func observe(priority: TiCardscanner.ObserverPriority = .standard, _ action: @escaping (T) -> Swift.Void) -> Swift.AnyObject
+  public func observeFromNextValue(priority: TiCardscanner.ObserverPriority = .standard, _ action: @escaping (T) -> Swift.Void) -> Swift.AnyObject
+  public func updated(_ action: (inout T) -> Swift.Void)
+  @objc deinit
+}
+extension TiCardscanner.Observable {
+  public struct ObserveNotifcationBehaviour {
+  }
+}
+extension TiCardscanner.Observable.ObserveNotifcationBehaviour where T : Swift.Equatable {
+  public static var onChange: TiCardscanner.Observable<T>.ObserveNotifcationBehaviour {
+    get
+  }
+}
+extension TiCardscanner.Observable : TiCardscanner.Chainable {
+}
+public protocol Associatable : AnyObject {
+}
+extension TiCardscanner.Associatable {
+  public func associatedObject<T>(name: Swift.String = #function, makeDefault: () -> T) -> T where T : AnyObject
+}
+extension ObjectiveC.NSObject : TiCardscanner.Associatable {
+}
+@propertyWrapper public class WeakNonOptional<Value> where Value : AnyObject {
+  public init(wrappedValue: @autoclosure @escaping () -> Value)
+  public init(wrappedValue: @escaping () -> Value)
+  public var hasLiveValue: Swift.Bool {
+    get
+  }
+  public var wrappedValue: Value {
+    get
+    set
+  }
+  @objc deinit
+}
+public struct AxesSet : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = TiCardscanner.AxesSet
+  public typealias Element = TiCardscanner.AxesSet
+  public typealias RawValue = Swift.Int
+}
+extension TiCardscanner.AxesSet {
+  public static let vertical: TiCardscanner.AxesSet
+  public static let horizontal: TiCardscanner.AxesSet
+  public static let both: TiCardscanner.AxesSet
+}
+@objc @_inheritsConvenienceInitializers final public class BasicUIActionHandler : ObjectiveC.NSObject {
+  final public var action: (() -> Swift.Void)?
+  @objc final public func performAction()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIControl {
+  @_Concurrency.MainActor(unsafe) public var touchUpInside: TiCardscanner.BasicUIActionHandler {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var valueChanged: TiCardscanner.BasicUIActionHandler {
+    get
+  }
+}
+extension UIKit.UIGestureRecognizer {
+  @_Concurrency.MainActor(unsafe) public var handler: TiCardscanner.BasicUIActionHandler {
+    get
+  }
+}
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor(unsafe) public var handler: TiCardscanner.BasicUIActionHandler {
+    get
+  }
+}
+extension QuartzCore.CACornerMask {
+  public static var topLeft: QuartzCore.CACornerMask {
+    get
+  }
+  public static var topRight: QuartzCore.CACornerMask {
+    get
+  }
+  public static var bottomLeft: QuartzCore.CACornerMask {
+    get
+  }
+  public static var bottomRight: QuartzCore.CACornerMask {
+    get
+  }
+  public static var all: QuartzCore.CACornerMask {
+    get
+  }
+}
+extension Swift.Result {
+  public var successValue: Success? {
+    get
+  }
+  public func mapError<SomeError>(_ error: SomeError) -> Swift.Result<Success, SomeError> where SomeError : Swift.Error
+  @discardableResult
+  public func ifSuccess(_ action: (Success) -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func ifSuccess(_ action: () -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func ifFailure(_ action: (Failure) -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func ifFailure(_ action: () -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func forAll(_ action: (Swift.Result<Success, Failure>) -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func forSuccess(_ action: (Swift.Result<Success, Failure>) -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func forFailure(_ action: (Swift.Result<Success, Failure>) -> Swift.Void) -> Swift.Result<Success, Failure>
+  @discardableResult
+  public func on(_ queue: Dispatch.DispatchQueue, _ action: @escaping (Swift.Result<Success, Failure>) -> Swift.Void) -> Swift.Result<Success, Failure>
+  public func fullMap<Out, Err>(_ action: (Swift.Result<Success, Failure>) -> Swift.Result<Out, Err>) -> Swift.Result<Out, Err> where Err : Swift.Error
+}
+extension Swift.Result where Success : TiCardscanner.OptionalProtocol {
+  public func mapNil(_ error: Failure) -> Swift.Result<Success.Wrapped, Failure>
+}
+@propertyWrapper public struct ThreadSafe<T> {
+  public var unsafeValue: T
+  public var wrappedValue: T {
+    get
+    set
+  }
+  public init(wrappedValue: T, writeSafe: TiCardscanner.WriteSafe = WriteSafe())
+}
+public func parallelRequests<Out>(notifyQueue: Dispatch.DispatchQueue = .main, _ requests: [TiCardscanner.AsyncRequest<Out>], _ completion: @escaping TiCardscanner.CompletionHandler<[Out]>)
+public func parallelRequests<Out1, Out2>(notifyQueue: Dispatch.DispatchQueue = .main, _ ar1: @escaping TiCardscanner.AsyncRequest<Out1>, _ ar2: @escaping TiCardscanner.AsyncRequest<Out2>, _ completion: @escaping TiCardscanner.CompletionHandler<(Out1, Out2)>)
+public func parallelRequests<Out1, Out2, Out3>(notifyQueue: Dispatch.DispatchQueue = .main, _ ar1: @escaping TiCardscanner.AsyncRequest<Out1>, _ ar2: @escaping TiCardscanner.AsyncRequest<Out2>, _ ar3: @escaping TiCardscanner.AsyncRequest<Out3>, _ completion: @escaping TiCardscanner.CompletionHandler<(Out1, Out2, Out3)>)
+public struct Pinning {
+  public var top: CoreGraphics.CGFloat?
+  public var leading: CoreGraphics.CGFloat?
+  public var bottom: CoreGraphics.CGFloat?
+  public var trailing: CoreGraphics.CGFloat?
+  public init(top: CoreGraphics.CGFloat? = 0, trailing: CoreGraphics.CGFloat? = 0, bottom: CoreGraphics.CGFloat? = 0, leading: CoreGraphics.CGFloat? = 0)
+}
+extension TiCardscanner.Pinning {
+  public static func all(_ value: CoreGraphics.CGFloat?) -> TiCardscanner.Pinning
+  public static func top(_ value: CoreGraphics.CGFloat?, others: CoreGraphics.CGFloat? = 0) -> TiCardscanner.Pinning
+  public static func trailing(_ value: CoreGraphics.CGFloat?, others: CoreGraphics.CGFloat? = 0) -> TiCardscanner.Pinning
+  public static func bottom(_ value: CoreGraphics.CGFloat?, others: CoreGraphics.CGFloat? = 0) -> TiCardscanner.Pinning
+  public static func axes(vertical: CoreGraphics.CGFloat?, horizontal: CoreGraphics.CGFloat?) -> TiCardscanner.Pinning
+  public static func verticalOnly(_ value: CoreGraphics.CGFloat) -> TiCardscanner.Pinning
+  public static func horizontalOnly(_ value: CoreGraphics.CGFloat?) -> TiCardscanner.Pinning
+  public static func topRight(_ value: CoreGraphics.CGFloat, others: CoreGraphics.CGFloat? = 0) -> TiCardscanner.Pinning
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withSubviews(_ content: () -> [UIKit.UIView]) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withEdgePinnedContent(_ pinning: TiCardscanner.Pinning = .all(0), priority: UIKit.UILayoutPriority = .required, add: Swift.Bool = true, safeArea: Swift.Bool = false, content: () -> UIKit.UIView) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withEdgePinnedContent(_ pinning: TiCardscanner.Pinning = .all(0), priority: UIKit.UILayoutPriority = .required, add: Swift.Bool = true, safeArea: Swift.Bool = false, content: () -> [UIKit.UIView]) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withCenteredContent(add: Swift.Bool = true, safeArea: Swift.Bool = false, x: CoreGraphics.CGFloat? = 0, y: CoreGraphics.CGFloat? = 0, priority: UIKit.UILayoutPriority = .required, content: () -> [UIKit.UIView]) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withVerticallyCenteredContent(add: Swift.Bool = true, safeArea: Swift.Bool = false, y: CoreGraphics.CGFloat? = 0, horizontalEdgePin: CoreGraphics.CGFloat? = 0, priority: UIKit.UILayoutPriority = .required, content: () -> [UIKit.UIView]) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withScrollableContent(scrollView: UIKit.UIScrollView = UIScrollView(), pinnedAxes: TiCardscanner.AxesSet = .horizontal, content: () -> UIKit.UIView) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withRoundedCorners(corners: UIKit.UIRectCorner, radius: CoreGraphics.CGFloat) -> Self
+  @_Concurrency.MainActor(unsafe) public static func spacer(priority: UIKit.UILayoutPriority = .init(50)) -> UIKit.UIView
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withAspectFilled(_ content: () -> UIKit.UIView) -> Self
+}
+extension UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public func addArrangedSubViews(_ views: [UIKit.UIView])
+}
+public func weakClosure<WeakValue>(_ weakValue: WeakValue, on asyncQueue: Dispatch.DispatchQueue? = nil, _ closure: @escaping (WeakValue) -> Swift.Void) -> () -> Swift.Void where WeakValue : AnyObject
+public func weakClosure<WeakValue, T1>(_ weakValue: WeakValue, on asyncQueue: Dispatch.DispatchQueue? = nil, _ closure: @escaping (WeakValue, T1) -> Swift.Void) -> (T1) -> Swift.Void where WeakValue : AnyObject
+public func weakClosure<WeakValue, T1, T2>(_ weakValue: WeakValue, on asyncQueue: Dispatch.DispatchQueue? = nil, _ closure: @escaping (WeakValue, T1, T2) -> Swift.Void) -> (T1, T2) -> Swift.Void where WeakValue : AnyObject
+public func weakClosure<WeakValue, T1, T2, T3>(_ weakValue: WeakValue, on asyncQueue: Dispatch.DispatchQueue? = nil, _ closure: @escaping (WeakValue, T1, T2, T3) -> Swift.Void) -> (T1, T2, T3) -> Swift.Void where WeakValue : AnyObject
+public func weakClosure<WeakValue, T1, T2, T3, T4>(_ weakValue: WeakValue, on asyncQueue: Dispatch.DispatchQueue? = nil, _ closure: @escaping (WeakValue, T1, T2, T3, T4) -> Swift.Void) -> (T1, T2, T3, T4) -> Swift.Void where WeakValue : AnyObject
+extension Dispatch.DispatchQueue {
+  public func asyncWeakClosure<WeakValue>(_ weakValue: WeakValue, _ closure: @escaping (WeakValue) -> Swift.Void) where WeakValue : AnyObject
+  public func asyncWeakClosure<WeakValue>(_ weakValue: WeakValue, afterDeadline deadline: Dispatch.DispatchTime, _ closure: @escaping (WeakValue) -> Swift.Void) where WeakValue : AnyObject
+}
+public struct ObserverPriority : Swift.Comparable {
+  public var value: Swift.Int {
+    get
+    set
+  }
+  public init(value: Swift.Int)
+  public static let cellContainer: TiCardscanner.ObserverPriority
+  public static let standard: TiCardscanner.ObserverPriority
+  public static let observerSyncing: TiCardscanner.ObserverPriority
+  public static func custom(_ value: Swift.Int) -> TiCardscanner.ObserverPriority
+  public static func < (lhs: TiCardscanner.ObserverPriority, rhs: TiCardscanner.ObserverPriority) -> Swift.Bool
+  public static func == (a: TiCardscanner.ObserverPriority, b: TiCardscanner.ObserverPriority) -> Swift.Bool
+}
+public struct ValueChange<Value> {
+  public var new: Value
+  public var old: Value
+}
+extension TiCardscanner.ValueChange : Swift.Equatable where Value : Swift.Equatable {
+  public var hasChange: Swift.Bool {
+    get
+  }
+  public static func == (a: TiCardscanner.ValueChange<Value>, b: TiCardscanner.ValueChange<Value>) -> Swift.Bool
+}
+extension TiCardscanner.ValueChange {
+  public func map<NewValue>(_ action: (Value) throws -> NewValue) rethrows -> TiCardscanner.ValueChange<NewValue>
+  public func hasChanged<Child>(_ keyPath: Swift.KeyPath<Value, Child>) -> Swift.Bool where Child : Swift.Equatable
+}
+public class ObserverSet<Value> {
+  public init()
+  public func run(with values: TiCardscanner.ValueChange<Value>)
+  public func add(retained: Any? = nil, priority: TiCardscanner.ObserverPriority = .standard, _ action: @escaping (Value) -> Swift.Void) -> Swift.AnyObject
+  public func addWithChange(retained: Any? = nil, priority: TiCardscanner.ObserverPriority = .standard, _ action: @escaping (TiCardscanner.ValueChange<Value>) -> Swift.Void) -> Swift.AnyObject
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SharkCardScanViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var viewModel: TiCardscanner.CardScanViewModel
+  @_Concurrency.MainActor(unsafe) public var overlayContainerView: TitaniumKit.TiUIViewProxy?
+  @_Concurrency.MainActor(unsafe) public var showInstructionView: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var instructionText: Swift.String?
+  @_Concurrency.MainActor(unsafe) final public let rootStackView: UIKit.UIStackView
+  @_Concurrency.MainActor(unsafe) public init(instructionText: Swift.String?, showInstructionView: Swift.Bool, overlayContainerView: TitaniumKit.TiUIViewProxy, viewModel: TiCardscanner.CardScanViewModel, styling: TiCardscanner.CardScanStyling = DefaultStyling())
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension TiCardscanner.SharkCardScanViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidAttemptToDismiss(_ pc: UIKit.UIPresentationController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerShouldDismiss(_ pc: UIKit.UIPresentationController) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerWillDismiss(_ pc: UIKit.UIPresentationController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ pc: UIKit.UIPresentationController)
+}
+public struct CardScannerResponse : Swift.Equatable {
+  public init(number: Swift.String, expiry: Swift.String?, holder: Swift.String?)
+  public let number: Swift.String
+  public let expiry: Swift.String?
+  public let holder: Swift.String?
+  public static func == (a: TiCardscanner.CardScannerResponse, b: TiCardscanner.CardScannerResponse) -> Swift.Bool
+}
+public protocol CardScannerProtocol : AnyObject {
+  var output: (TiCardscanner.CardScannerResponse?) -> Swift.Void { get set }
+  var regionOfInterest: CoreGraphics.CGRect { get set }
+  func read(buffer: CoreVideo.CVPixelBuffer, orientation: ImageIO.CGImagePropertyOrientation)
+  func reset()
+}
+final public class CardScanner : TiCardscanner.CardScannerProtocol {
+  @TiCardscanner.ThreadSafe final public var output: (TiCardscanner.CardScannerResponse?) -> Swift.Void {
+    get
+    set
+    _modify
+  }
+  @TiCardscanner.ThreadSafe final public var regionOfInterest: CoreGraphics.CGRect {
+    get
+    set
+    _modify
+  }
+  public init(now: Foundation.Date = Date())
+  final public func read(buffer: CoreVideo.CVPixelBuffer, orientation: ImageIO.CGImagePropertyOrientation)
+  final public func reset()
+  @objc deinit
+}
+public class CardScanViewModel {
+  final public let cameraStream: TiCardscanner.PixelBufferStream
+  public var isRunning: Swift.Bool
+  public var closeButtonTitle: Swift.String
+  public var insturctionText: Swift.String
+  public init(cameraAccess: TiCardscanner.CameraAccessProtocol = CameraAccess(), cameraStream: TiCardscanner.PixelBufferStream = CameraPixelBufferStream(), cardReader: TiCardscanner.CardScannerProtocol = CardScanner(), noPermissionAction: @escaping () -> Swift.Void, successHandler: @escaping (TiCardscanner.CardScannerResponse) -> Swift.Void)
+  @objc deinit
+}
+extension CoreGraphics.CGSize {
+  public init(w: CoreGraphics.CGFloat = .zero, h: CoreGraphics.CGFloat = .zero)
+  public static func square(_ value: CoreGraphics.CGFloat) -> CoreGraphics.CGSize
+  public static func width(_ value: CoreGraphics.CGFloat) -> CoreGraphics.CGSize
+  public static func height(_ value: CoreGraphics.CGFloat) -> CoreGraphics.CGSize
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withSquare(_ value: CoreGraphics.CGFloat, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withWidth(_ value: CoreGraphics.CGFloat, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withHeight(_ value: CoreGraphics.CGFloat, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withSize(_ value: CoreGraphics.CGSize, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withFixed(width: CoreGraphics.CGFloat? = nil, height: CoreGraphics.CGFloat? = nil, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withMinimum(width: CoreGraphics.CGFloat? = nil, height: CoreGraphics.CGFloat? = nil, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withMaximum(width: CoreGraphics.CGFloat? = nil, height: CoreGraphics.CGFloat? = nil, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withAspectRatio(_ value: CoreGraphics.CGFloat, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withAspectRatio(greaterThanOrEqualTo value: CoreGraphics.CGFloat, priority: UIKit.UILayoutPriority = .required) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withAspectFilledContent(priority: UIKit.UILayoutPriority = .required, content: () -> [UIKit.UIView]) -> Self
+}
+public protocol CameraAccessProtocol {
+  func request(_ compltion: @escaping (Swift.Bool) -> Swift.Void)
+}
+public struct CameraAccess : TiCardscanner.CameraAccessProtocol {
+  public init()
+  public func request(_ compltion: @escaping (Swift.Bool) -> Swift.Void)
+}
+public func parallelResultRequests<Out, Err>(notifyQueue: Dispatch.DispatchQueue = .main, _ requests: [TiCardscanner.AsyncRequest<Swift.Result<Out, Err>>], _ completion: @escaping TiCardscanner.CompletionHandler<Swift.Result<[Out], Err>>) where Err : Swift.Error
+public func parallelResultRequests<Out1, Out2, Err>(notifyQueue: Dispatch.DispatchQueue = .main, _ ar1: @escaping TiCardscanner.AsyncRequest<Swift.Result<Out1, Err>>, _ ar2: @escaping TiCardscanner.AsyncRequest<Swift.Result<Out2, Err>>, _ completion: @escaping TiCardscanner.CompletionHandler<Swift.Result<(Out1, Out2), Err>>) where Err : Swift.Error
+public func parallelResultRequests<Out1, Out2, Out3, Err>(notifyQueue: Dispatch.DispatchQueue = .main, _ ar1: @escaping TiCardscanner.AsyncRequest<Swift.Result<Out1, Err>>, _ ar2: @escaping TiCardscanner.AsyncRequest<Swift.Result<Out2, Err>>, _ ar3: @escaping TiCardscanner.AsyncRequest<Swift.Result<Out3, Err>>, _ completion: @escaping TiCardscanner.CompletionHandler<Swift.Result<(Out1, Out2, Out3), Err>>) where Err : Swift.Error
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func setCornerRadius(_ radius: CoreGraphics.CGFloat, corners: QuartzCore.CACornerMask = .all)
+}
+public func sequencedResultRequests<Out, Err>(notifyQueue: Dispatch.DispatchQueue = .main, _ requests: [TiCardscanner.AsyncRequest<Swift.Result<Out, Err>>], _ completion: @escaping TiCardscanner.CompletionHandler<Swift.Result<[Out], Err>>) where Err : Swift.Error
+public typealias CompletionHandler<Out> = (Out) -> Swift.Void
+public typealias AsyncRequest<Out> = (@escaping TiCardscanner.CompletionHandler<Out>) -> Swift.Void
+public func mapAsyncRequests<In, Out>(_ request: @escaping TiCardscanner.AsyncRequest<In>, map: @escaping (In) -> Out) -> TiCardscanner.AsyncRequest<Out>
+public protocol LayoutGuideSource {
+  var leadingAnchor: UIKit.NSLayoutXAxisAnchor { get }
+  var trailingAnchor: UIKit.NSLayoutXAxisAnchor { get }
+  var leftAnchor: UIKit.NSLayoutXAxisAnchor { get }
+  var rightAnchor: UIKit.NSLayoutXAxisAnchor { get }
+  var topAnchor: UIKit.NSLayoutYAxisAnchor { get }
+  var bottomAnchor: UIKit.NSLayoutYAxisAnchor { get }
+  var widthAnchor: UIKit.NSLayoutDimension { get }
+  var heightAnchor: UIKit.NSLayoutDimension { get }
+  var centerXAnchor: UIKit.NSLayoutXAxisAnchor { get }
+  var centerYAnchor: UIKit.NSLayoutYAxisAnchor { get }
+}
+extension UIKit.UILayoutGuide : TiCardscanner.LayoutGuideSource {
+}
+extension UIKit.UIView : TiCardscanner.LayoutGuideSource {
+}
+@_functionBuilder public struct GenericArrayBuilder<I> {
+  public typealias Expression = I
+  public typealias Component = [I]
+  public static func buildExpression(_ expression: TiCardscanner.GenericArrayBuilder<I>.Expression) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildExpression(_ expression: TiCardscanner.GenericArrayBuilder<I>.Component) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildExpression(_ expression: TiCardscanner.GenericArrayBuilder<I>.Expression?) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildBlock(_ children: TiCardscanner.GenericArrayBuilder<I>.Component...) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildBlock(_ component: TiCardscanner.GenericArrayBuilder<I>.Component) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildOptional(_ children: TiCardscanner.GenericArrayBuilder<I>.Component?) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildEither(first child: TiCardscanner.GenericArrayBuilder<I>.Component) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildEither(second child: TiCardscanner.GenericArrayBuilder<I>.Component) -> TiCardscanner.GenericArrayBuilder<I>.Component
+  public static func buildArray(_ components: [TiCardscanner.GenericArrayBuilder<I>.Component]) -> TiCardscanner.GenericArrayBuilder<I>.Component
+}
+extension Swift.Optional {
+  public func unwrap<E>(orThrow error: E) throws -> Wrapped where E : Swift.Error
+}
+public protocol OptionalProtocol {
+  associatedtype Wrapped
+  var wrapped: Self.Wrapped? { get }
+  @inlinable func flatMap<U>(_ transform: (Self.Wrapped) throws -> U?) rethrows -> U?
+}
+extension Swift.Optional : TiCardscanner.OptionalProtocol {
+  public var wrapped: Wrapped? {
+    get
+  }
+}
+public protocol WeakContainable {
+  associatedtype Content : AnyObject
+  var value: Self.Content? { get }
+}
+final public class WeakContainer<T> : Swift.Equatable, TiCardscanner.WeakContainable where T : AnyObject {
+  weak final public var value: T? {
+    get
+  }
+  public init(_ value: T?)
+  public static func == (lhs: TiCardscanner.WeakContainer<T>, rhs: TiCardscanner.WeakContainer<T>) -> Swift.Bool
+  public typealias Content = T
+  @objc deinit
+}
+extension Swift.Array where Element : TiCardscanner.WeakContainable {
+  public mutating func removeReleased()
+  public var containedValues: [Element.Content] {
+    get
+  }
+}
+extension Foundation.NSRegularExpression {
+  public func matches(in content: Swift.String) -> [Foundation.NSTextCheckingResult]
+  public func stringMatches(in content: Swift.String) -> [Swift.String]
+}
+public struct RegexHandle : Swift.ExpressibleByStringLiteral {
+  public let regex: Foundation.NSRegularExpression
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+}
+extension Swift.String {
+  public var fullNSRange: Foundation.NSRange {
+    get
+  }
+  public func string(for nsRange: Foundation.NSRange) -> Swift.String?
+}
+extension Swift.Array where Element == Foundation.NSTextCheckingResult {
+  public func extractStrings(from content: Swift.String) -> [Swift.String]
+}
+public func eraseParameters<P1, Out>(_ p1: P1, _ function: @escaping (P1, @escaping TiCardscanner.CompletionHandler<Out>) -> Swift.Void) -> TiCardscanner.AsyncRequest<Out>
+public func eraseParameters<P1, P2, Out>(_ p1: P1, _ p2: P2, _ function: @escaping (P1, P2, @escaping TiCardscanner.CompletionHandler<Out>) -> Swift.Void) -> TiCardscanner.AsyncRequest<Out>
+public func eraseParameters<P1, P2, P3, Out>(_ p1: P1, _ p2: P2, _ p3: P3, _ function: @escaping (P1, P2, P3, @escaping TiCardscanner.CompletionHandler<Out>) -> Swift.Void) -> TiCardscanner.AsyncRequest<Out>
+public func eraseParameters<P1, P2, P3, P4, Out>(_ p1: P1, _ p2: P2, _ p3: P3, _ p4: P4, _ function: @escaping (P1, P2, P3, P4, @escaping TiCardscanner.CompletionHandler<Out>) -> Swift.Void) -> TiCardscanner.AsyncRequest<Out>
+public protocol PixelBufferStream : AnyObject {
+  var output: (CoreVideo.CVPixelBuffer, ImageIO.CGImagePropertyOrientation) -> Swift.Void { get set }
+  var running: Swift.Bool { get set }
+  var toggleTorch: Swift.Bool { get set }
+  var previewView: UIKit.UIView { get }
+  func cameraRegion(forPreviewRegion previewRegion: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+}
+@objc @_inheritsConvenienceInitializers public class CameraPixelBufferStream : ObjectiveC.NSObject, TiCardscanner.PixelBufferStream, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  public var captureDevice: AVFoundation.AVCaptureDevice!
+  final public let previewView: UIKit.UIView
+  @TiCardscanner.ThreadSafe public var output: (CoreVideo.CVPixelBuffer, ImageIO.CGImagePropertyOrientation) -> Swift.Void {
+    get
+    set
+    _modify
+  }
+  public var running: Swift.Bool {
+    get
+    set
+  }
+  public var toggleTorch: Swift.Bool {
+    get
+    set
+  }
+  @objc override dynamic public init()
+  @objc deinit
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  public func cameraRegion(forPreviewRegion previewRegion: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+}
+public typealias LabelStyling = (font: UIKit.UIFont, color: UIKit.UIColor)
+public protocol CardScanStyling {
+  var instructionLabelStyling: TiCardscanner.LabelStyling { get set }
+  var cardNumberLabelStyling: TiCardscanner.LabelStyling { get set }
+  var expiryLabelStyling: TiCardscanner.LabelStyling { get set }
+  var holderLabelStyling: TiCardscanner.LabelStyling { get set }
+  var backgroundColor: UIKit.UIColor { get set }
+}
+public struct DefaultStyling : TiCardscanner.CardScanStyling {
+  public var instructionLabelStyling: (font: UIKit.UIFont, color: UIKit.UIColor)
+  public var cardNumberLabelStyling: (font: UIKit.UIFont, color: UIKit.UIColor)
+  public var expiryLabelStyling: (font: UIKit.UIFont, color: UIKit.UIColor)
+  public var holderLabelStyling: (font: UIKit.UIFont, color: UIKit.UIColor)
+  public var backgroundColor: UIKit.UIColor
+  public init()
+}
+public protocol Chainable {
+}
+extension TiCardscanner.Chainable {
+  @discardableResult
+  public func with(_ block: (Self) throws -> Swift.Void) rethrows -> Self
+  @discardableResult
+  public func mutatedWith(_ block: (inout Self) -> Swift.Void) -> Self
+}
+extension ObjectiveC.NSObject : TiCardscanner.Chainable {
+}
+extension UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public class func make(_ axis: UIKit.NSLayoutConstraint.Axis, spacing: CoreGraphics.CGFloat? = nil, alignment: UIKit.UIStackView.Alignment? = nil, distribution: UIKit.UIStackView.Distribution? = nil, layoutMargins: UIKit.UIEdgeInsets? = nil) -> Self
+  @_Concurrency.MainActor(unsafe) public class func vertical(spacing: CoreGraphics.CGFloat? = nil, alignment: UIKit.UIStackView.Alignment? = nil, distribution: UIKit.UIStackView.Distribution? = nil, layoutMargins: UIKit.UIEdgeInsets? = nil) -> Self
+  @_Concurrency.MainActor(unsafe) public class func horizontal(spacing: CoreGraphics.CGFloat? = nil, alignment: UIKit.UIStackView.Alignment? = nil, distribution: UIKit.UIStackView.Distribution? = nil, layoutMargins: UIKit.UIEdgeInsets? = nil) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func withArrangedViews(_ content: () -> [UIKit.UIView]) -> Self
+}
+extension Swift.AdditiveArithmetic where Self : Swift.ExpressibleByIntegerLiteral {
+  public mutating func increment()
+  public mutating func decrement()
+}
+public class WriteSafe {
+  public init()
+  public func perform<T>(_ action: () -> T) -> T
+  @objc deinit
+}
+extension TiCardscanner.Observable where T : Swift.Equatable {
+  public func sync<NewT>(_ keyPath: Swift.WritableKeyPath<T, NewT>, onto observable: TiCardscanner.Observable<NewT>, initaliseWithOntoValue: Swift.Bool = false) where NewT : Swift.Equatable
+  public func synced<NewT>(_ keyPath: Swift.WritableKeyPath<T, NewT>) -> TiCardscanner.Observable<NewT> where NewT : Swift.Equatable
+  public static func onChange(_ value: T) -> TiCardscanner.Observable<T>
+}
+extension TiCardscanner.Observable {
+  public static func onSet(_ value: T) -> TiCardscanner.Observable<T>
+}
+extension UIKit.UIEdgeInsets {
+  public static func insets(top: CoreGraphics.CGFloat = .zero, left: CoreGraphics.CGFloat = .zero, bottom: CoreGraphics.CGFloat = .zero, right: CoreGraphics.CGFloat = .zero) -> UIKit.UIEdgeInsets
+  public static func all(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func axes(vertical: CoreGraphics.CGFloat = .zero, horizontal: CoreGraphics.CGFloat = .zero) -> UIKit.UIEdgeInsets
+  public static func horizontal(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func vertical(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func top(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func left(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func bottom(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func right(_ value: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func top(_ value: CoreGraphics.CGFloat, other: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func left(_ value: CoreGraphics.CGFloat, other: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func bottom(_ value: CoreGraphics.CGFloat, other: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+  public static func right(_ value: CoreGraphics.CGFloat, other: CoreGraphics.CGFloat) -> UIKit.UIEdgeInsets
+}
+public func repeatingRequest(timeInterval: Foundation.TimeInterval, _ request: @escaping TiCardscanner.AsyncRequest<Any>) -> Any
+public func repeatingRequest(timeInterval: @escaping () -> Foundation.TimeInterval, _ request: @escaping TiCardscanner.AsyncRequest<Any>) -> Any

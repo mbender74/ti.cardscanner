@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="ti.cardscanner.RecognitionFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+     <View
+         android:id="@+id/cardRectangle"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginEnd="16dp"
+         android:background="@drawable/card_rectangle"
+         app:layout_constraintBottom_toBottomOf="@+id/cameraPreview"
+         app:layout_constraintDimensionRatio="H,480:302"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/cameraPreview" />
+         
+    <TextView
+        android:id="@+id/succeedResultsTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal=" 70dp"
+        android:layout_marginVertical="16dp"
+        android:textColor="@color/success"
+        app:layout_constraintBottom_toBottomOf="@+id/cardRectangle"
+        app:layout_constraintDimensionRatio="H,480:302"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardRectangle"
+        android:textSize="24dp"
+        tools:text="@tools:sample/lorem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+repositories {
+  google()
+  mavenCentral()
+	jcenter()
+  maven { url "https://jitpack.io" }
+}
+dependencies {
+}
+android {
+  packagingOptions {
+      exclude 'META-INF/*'
+ }
+}

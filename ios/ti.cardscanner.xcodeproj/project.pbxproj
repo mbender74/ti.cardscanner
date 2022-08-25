@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C079ECD288F04D000FA9329 /* SharkCardScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC0288F04D000FA9329 /* SharkCardScanViewController.swift */; };
+		2C079ECE288F04D000FA9329 /* CardScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC1288F04D000FA9329 /* CardScanViewModel.swift */; };
+		2C079ECF288F04D000FA9329 /* CameraAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC2288F04D000FA9329 /* CameraAccess.swift */; };
+		2C079ED0288F04D000FA9329 /* PixelBufferStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC3288F04D000FA9329 /* PixelBufferStream.swift */; };
+		2C079ED1288F04D000FA9329 /* CardScannerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC4288F04D000FA9329 /* CardScannerExtensions.swift */; };
+		2C079ED2288F04D000FA9329 /* ScannedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC5288F04D000FA9329 /* ScannedCardView.swift */; };
+		2C079ED3288F04D000FA9329 /* LayoutContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC6288F04D000FA9329 /* LayoutContentView.swift */; };
+		2C079ED4288F04D000FA9329 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C079EC7288F04D000FA9329 /* Images.xcassets */; };
+		2C079ED5288F04D000FA9329 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EC9288F04D000FA9329 /* Styling.swift */; };
+		2C079ED6288F04D000FA9329 /* CardScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079ECA288F04D000FA9329 /* CardScanner.swift */; };
+		2C079ED7288F04D000FA9329 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079ECB288F04D000FA9329 /* DateExtensions.swift */; };
+		2C079ED8288F04D000FA9329 /* CardCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079ECC288F04D000FA9329 /* CardCheck.swift */; };
+		2C079EFF288F056300FA9329 /* AxesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EDB288F056300FA9329 /* AxesSet.swift */; };
+		2C079F00288F056300FA9329 /* UIStackViewConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EDC288F056300FA9329 /* UIStackViewConstructor.swift */; };
+		2C079F01288F056300FA9329 /* PinningConstraintHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EDD288F056300FA9329 /* PinningConstraintHelpers.swift */; };
+		2C079F02288F056300FA9329 /* LayoutGuideSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EDE288F056300FA9329 /* LayoutGuideSource.swift */; };
+		2C079F03288F056300FA9329 /* SizingConstraintHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EDF288F056300FA9329 /* SizingConstraintHelpers.swift */; };
+		2C079F04288F056300FA9329 /* WeakContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE1288F056300FA9329 /* WeakContainable.swift */; };
+		2C079F05288F056300FA9329 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE2288F056300FA9329 /* Chainable.swift */; };
+		2C079F06288F056300FA9329 /* WriteSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE3288F056300FA9329 /* WriteSafe.swift */; };
+		2C079F07288F056300FA9329 /* NSRegularExpressionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE4288F056300FA9329 /* NSRegularExpressionExtensions.swift */; };
+		2C079F08288F056300FA9329 /* ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE5288F056300FA9329 /* ThreadSafe.swift */; };
+		2C079F09288F056300FA9329 /* WeakNonOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE6288F056300FA9329 /* WeakNonOptional.swift */; };
+		2C079F0A288F056300FA9329 /* WeakClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE7288F056300FA9329 /* WeakClosure.swift */; };
+		2C079F0B288F056300FA9329 /* BasicUIActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE8288F056300FA9329 /* BasicUIActionHandler.swift */; };
+		2C079F0C288F056300FA9329 /* ParameterErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EE9288F056300FA9329 /* ParameterErasure.swift */; };
+		2C079F0D288F056300FA9329 /* Associatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EEA288F056300FA9329 /* Associatable.swift */; };
+		2C079F0E288F056300FA9329 /* GenericArrayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EEB288F056300FA9329 /* GenericArrayBuilder.swift */; };
+		2C079F0F288F056300FA9329 /* AdditiveArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EED288F056300FA9329 /* AdditiveArithmetic.swift */; };
+		2C079F10288F056300FA9329 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EEE288F056300FA9329 /* UIView.swift */; };
+		2C079F11288F056300FA9329 /* CACornerMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EEF288F056300FA9329 /* CACornerMask.swift */; };
+		2C079F12288F056300FA9329 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF0288F056300FA9329 /* UIStackView.swift */; };
+		2C079F13288F056300FA9329 /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF1288F056300FA9329 /* ResultExtensions.swift */; };
+		2C079F14288F056300FA9329 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF2288F056300FA9329 /* CGSize.swift */; };
+		2C079F15288F056300FA9329 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF3288F056300FA9329 /* OptionalExtensions.swift */; };
+		2C079F16288F056300FA9329 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF4288F056300FA9329 /* UIEdgeInsets.swift */; };
+		2C079F17288F056300FA9329 /* SequencedResultRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF6288F056300FA9329 /* SequencedResultRequests.swift */; };
+		2C079F18288F056300FA9329 /* AsyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF7288F056300FA9329 /* AsyncRequest.swift */; };
+		2C079F19288F056300FA9329 /* ParallelRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF8288F056300FA9329 /* ParallelRequests.swift */; };
+		2C079F1A288F056300FA9329 /* ParallelResultRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EF9288F056300FA9329 /* ParallelResultRequests.swift */; };
+		2C079F1B288F056300FA9329 /* RepeatingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EFA288F056300FA9329 /* RepeatingRequest.swift */; };
+		2C079F1C288F056300FA9329 /* ObservableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EFC288F056300FA9329 /* ObservableExtensions.swift */; };
+		2C079F1D288F056300FA9329 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EFD288F056300FA9329 /* Observable.swift */; };
+		2C079F1E288F056300FA9329 /* ObserverSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C079EFE288F056300FA9329 /* ObserverSet.swift */; };
+		2CA9E8F02889DDC90014820C /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA9E8EE2889DDC90014820C /* Vision.framework */; };
+		B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */; };
+		DB34CDE0207B998A005F8E8C /* TiCardscannerModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB34CDDE207B998A005F8E8C /* TiCardscannerModuleAssets.m */; };
+		DB34CDE1207B998A005F8E8C /* TiCardscannerModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = DB34CDDF207B998A005F8E8C /* TiCardscannerModuleAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB34CDE6207B9EBD005F8E8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34CDE5207B9EBD005F8E8C /* Foundation.framework */; };
+		DB52E2401E9CCF8D00AAAEE0 /* TiCardscanner_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = DB52E23F1E9CCF8D00AAAEE0 /* TiCardscanner_Prefix.pch */; };
+		DB52E2431E9CD0F800AAAEE0 /* TiCardscannerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52E2421E9CD0F800AAAEE0 /* TiCardscannerModule.swift */; };
+		DB75E5161E9CD59000809B2D /* TiCardscanner.h in Headers */ = {isa = PBXBuildFile; fileRef = DB75E5151E9CD58100809B2D /* TiCardscanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C079EC0288F04D000FA9329 /* SharkCardScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharkCardScanViewController.swift; sourceTree = "<group>"; };
+		2C079EC1288F04D000FA9329 /* CardScanViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScanViewModel.swift; sourceTree = "<group>"; };
+		2C079EC2288F04D000FA9329 /* CameraAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAccess.swift; sourceTree = "<group>"; };
+		2C079EC3288F04D000FA9329 /* PixelBufferStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelBufferStream.swift; sourceTree = "<group>"; };
+		2C079EC4288F04D000FA9329 /* CardScannerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScannerExtensions.swift; sourceTree = "<group>"; };
+		2C079EC5288F04D000FA9329 /* ScannedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedCardView.swift; sourceTree = "<group>"; };
+		2C079EC6288F04D000FA9329 /* LayoutContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutContentView.swift; sourceTree = "<group>"; };
+		2C079EC7288F04D000FA9329 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C079EC9288F04D000FA9329 /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
+		2C079ECA288F04D000FA9329 /* CardScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScanner.swift; sourceTree = "<group>"; };
+		2C079ECB288F04D000FA9329 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		2C079ECC288F04D000FA9329 /* CardCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCheck.swift; sourceTree = "<group>"; };
+		2C079EDB288F056300FA9329 /* AxesSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesSet.swift; sourceTree = "<group>"; };
+		2C079EDC288F056300FA9329 /* UIStackViewConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewConstructor.swift; sourceTree = "<group>"; };
+		2C079EDD288F056300FA9329 /* PinningConstraintHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinningConstraintHelpers.swift; sourceTree = "<group>"; };
+		2C079EDE288F056300FA9329 /* LayoutGuideSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuideSource.swift; sourceTree = "<group>"; };
+		2C079EDF288F056300FA9329 /* SizingConstraintHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizingConstraintHelpers.swift; sourceTree = "<group>"; };
+		2C079EE1288F056300FA9329 /* WeakContainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakContainable.swift; sourceTree = "<group>"; };
+		2C079EE2288F056300FA9329 /* Chainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
+		2C079EE3288F056300FA9329 /* WriteSafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteSafe.swift; sourceTree = "<group>"; };
+		2C079EE4288F056300FA9329 /* NSRegularExpressionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegularExpressionExtensions.swift; sourceTree = "<group>"; };
+		2C079EE5288F056300FA9329 /* ThreadSafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadSafe.swift; sourceTree = "<group>"; };
+		2C079EE6288F056300FA9329 /* WeakNonOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakNonOptional.swift; sourceTree = "<group>"; };
+		2C079EE7288F056300FA9329 /* WeakClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakClosure.swift; sourceTree = "<group>"; };
+		2C079EE8288F056300FA9329 /* BasicUIActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicUIActionHandler.swift; sourceTree = "<group>"; };
+		2C079EE9288F056300FA9329 /* ParameterErasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterErasure.swift; sourceTree = "<group>"; };
+		2C079EEA288F056300FA9329 /* Associatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Associatable.swift; sourceTree = "<group>"; };
+		2C079EEB288F056300FA9329 /* GenericArrayBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericArrayBuilder.swift; sourceTree = "<group>"; };
+		2C079EED288F056300FA9329 /* AdditiveArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditiveArithmetic.swift; sourceTree = "<group>"; };
+		2C079EEE288F056300FA9329 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2C079EEF288F056300FA9329 /* CACornerMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CACornerMask.swift; sourceTree = "<group>"; };
+		2C079EF0288F056300FA9329 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		2C079EF1288F056300FA9329 /* ResultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
+		2C079EF2288F056300FA9329 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		2C079EF3288F056300FA9329 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		2C079EF4288F056300FA9329 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		2C079EF6288F056300FA9329 /* SequencedResultRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencedResultRequests.swift; sourceTree = "<group>"; };
+		2C079EF7288F056300FA9329 /* AsyncRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncRequest.swift; sourceTree = "<group>"; };
+		2C079EF8288F056300FA9329 /* ParallelRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallelRequests.swift; sourceTree = "<group>"; };
+		2C079EF9288F056300FA9329 /* ParallelResultRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallelResultRequests.swift; sourceTree = "<group>"; };
+		2C079EFA288F056300FA9329 /* RepeatingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatingRequest.swift; sourceTree = "<group>"; };
+		2C079EFC288F056300FA9329 /* ObservableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExtensions.swift; sourceTree = "<group>"; };
+		2C079EFD288F056300FA9329 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		2C079EFE288F056300FA9329 /* ObserverSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverSet.swift; sourceTree = "<group>"; };
+		2CA9E8EE2889DDC90014820C /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/Vision.framework; sourceTree = DEVELOPER_DIR; };
+		B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "$(TITANIUM_SDK)/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
+		DB34CDDE207B998A005F8E8C /* TiCardscannerModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiCardscannerModuleAssets.m; path = Classes/TiCardscannerModuleAssets.m; sourceTree = SOURCE_ROOT; };
+		DB34CDDF207B998A005F8E8C /* TiCardscannerModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiCardscannerModuleAssets.h; path = Classes/TiCardscannerModuleAssets.h; sourceTree = SOURCE_ROOT; };
+		DB34CDE5207B9EBD005F8E8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB52E22A1E9CCD7000AAAEE0 /* TiCardscanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TiCardscanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB52E22E1E9CCD7000AAAEE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB52E23F1E9CCF8D00AAAEE0 /* TiCardscanner_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiCardscanner_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		DB52E2421E9CD0F800AAAEE0 /* TiCardscannerModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiCardscannerModule.swift; path = Classes/TiCardscannerModule.swift; sourceTree = "<group>"; };
+		DB75E5151E9CD58100809B2D /* TiCardscanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiCardscanner.h; path = Classes/TiCardscanner.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB52E2261E9CCD7000AAAEE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA9E8F02889DDC90014820C /* Vision.framework in Frameworks */,
+				DB34CDE6207B9EBD005F8E8C /* Foundation.framework in Frameworks */,
+				B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C079EBF288F04D000FA9329 /* SharkCardScan */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EC0288F04D000FA9329 /* SharkCardScanViewController.swift */,
+				2C079EC1288F04D000FA9329 /* CardScanViewModel.swift */,
+				2C079EC2288F04D000FA9329 /* CameraAccess.swift */,
+				2C079EC3288F04D000FA9329 /* PixelBufferStream.swift */,
+				2C079EC4288F04D000FA9329 /* CardScannerExtensions.swift */,
+				2C079EC5288F04D000FA9329 /* ScannedCardView.swift */,
+				2C079EC6288F04D000FA9329 /* LayoutContentView.swift */,
+				2C079EC7288F04D000FA9329 /* Images.xcassets */,
+				2C079EC8288F04D000FA9329 /* Styling */,
+				2C079ECA288F04D000FA9329 /* CardScanner.swift */,
+				2C079ECB288F04D000FA9329 /* DateExtensions.swift */,
+				2C079ECC288F04D000FA9329 /* CardCheck.swift */,
+			);
+			name = SharkCardScan;
+			path = Classes/SharkCardScan;
+			sourceTree = "<group>";
+		};
+		2C079EC8288F04D000FA9329 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EC9288F04D000FA9329 /* Styling.swift */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
+		2C079ED9288F056300FA9329 /* SharkUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EDA288F056300FA9329 /* Constraints */,
+				2C079EE0288F056300FA9329 /* Utils */,
+				2C079EEC288F056300FA9329 /* Extensions */,
+				2C079EF5288F056300FA9329 /* Requests */,
+				2C079EFB288F056300FA9329 /* Observable */,
+			);
+			name = SharkUtils;
+			path = Classes/SharkUtils;
+			sourceTree = "<group>";
+		};
+		2C079EDA288F056300FA9329 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EDB288F056300FA9329 /* AxesSet.swift */,
+				2C079EDC288F056300FA9329 /* UIStackViewConstructor.swift */,
+				2C079EDD288F056300FA9329 /* PinningConstraintHelpers.swift */,
+				2C079EDE288F056300FA9329 /* LayoutGuideSource.swift */,
+				2C079EDF288F056300FA9329 /* SizingConstraintHelpers.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		2C079EE0288F056300FA9329 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EE1288F056300FA9329 /* WeakContainable.swift */,
+				2C079EE2288F056300FA9329 /* Chainable.swift */,
+				2C079EE3288F056300FA9329 /* WriteSafe.swift */,
+				2C079EE4288F056300FA9329 /* NSRegularExpressionExtensions.swift */,
+				2C079EE5288F056300FA9329 /* ThreadSafe.swift */,
+				2C079EE6288F056300FA9329 /* WeakNonOptional.swift */,
+				2C079EE7288F056300FA9329 /* WeakClosure.swift */,
+				2C079EE8288F056300FA9329 /* BasicUIActionHandler.swift */,
+				2C079EE9288F056300FA9329 /* ParameterErasure.swift */,
+				2C079EEA288F056300FA9329 /* Associatable.swift */,
+				2C079EEB288F056300FA9329 /* GenericArrayBuilder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C079EEC288F056300FA9329 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EED288F056300FA9329 /* AdditiveArithmetic.swift */,
+				2C079EEE288F056300FA9329 /* UIView.swift */,
+				2C079EEF288F056300FA9329 /* CACornerMask.swift */,
+				2C079EF0288F056300FA9329 /* UIStackView.swift */,
+				2C079EF1288F056300FA9329 /* ResultExtensions.swift */,
+				2C079EF2288F056300FA9329 /* CGSize.swift */,
+				2C079EF3288F056300FA9329 /* OptionalExtensions.swift */,
+				2C079EF4288F056300FA9329 /* UIEdgeInsets.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C079EF5288F056300FA9329 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EF6288F056300FA9329 /* SequencedResultRequests.swift */,
+				2C079EF7288F056300FA9329 /* AsyncRequest.swift */,
+				2C079EF8288F056300FA9329 /* ParallelRequests.swift */,
+				2C079EF9288F056300FA9329 /* ParallelResultRequests.swift */,
+				2C079EFA288F056300FA9329 /* RepeatingRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		2C079EFB288F056300FA9329 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				2C079EFC288F056300FA9329 /* ObservableExtensions.swift */,
+				2C079EFD288F056300FA9329 /* Observable.swift */,
+				2C079EFE288F056300FA9329 /* ObserverSet.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		DB258CA41F0964DE000D0D8D /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */,
+				DB34CDDF207B998A005F8E8C /* TiCardscannerModuleAssets.h */,
+				DB34CDDE207B998A005F8E8C /* TiCardscannerModuleAssets.m */,
+				DB75E5151E9CD58100809B2D /* TiCardscanner.h */,
+				DB52E23F1E9CCF8D00AAAEE0 /* TiCardscanner_Prefix.pch */,
+				DB52E22E1E9CCD7000AAAEE0 /* Info.plist */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		DB258CA51F0964F6000D0D8D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2C079ED9288F056300FA9329 /* SharkUtils */,
+				2C079EBF288F04D000FA9329 /* SharkCardScan */,
+				DB52E2421E9CD0F800AAAEE0 /* TiCardscannerModule.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		DB34CDE2207B9D6A005F8E8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CA9E8EE2889DDC90014820C /* Vision.framework */,
+				B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */,
+				DB34CDE5207B9EBD005F8E8C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB52E2201E9CCD7000AAAEE0 = {
+			isa = PBXGroup;
+			children = (
+				DB52E22C1E9CCD7000AAAEE0 /* TiCardscanner */,
+				DB52E22B1E9CCD7000AAAEE0 /* Products */,
+				DB34CDE2207B9D6A005F8E8C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB52E22B1E9CCD7000AAAEE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB52E22A1E9CCD7000AAAEE0 /* TiCardscanner.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB52E22C1E9CCD7000AAAEE0 /* TiCardscanner */ = {
+			isa = PBXGroup;
+			children = (
+				DB258CA51F0964F6000D0D8D /* Sources */,
+				DB258CA41F0964DE000D0D8D /* Misc */,
+			);
+			name = TiCardscanner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DB52E2271E9CCD7000AAAEE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB75E5161E9CD59000809B2D /* TiCardscanner.h in Headers */,
+				DB34CDE1207B998A005F8E8C /* TiCardscannerModuleAssets.h in Headers */,
+				DB52E2401E9CCF8D00AAAEE0 /* TiCardscanner_Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DB52E2291E9CCD7000AAAEE0 /* TiCardscanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB52E2321E9CCD7000AAAEE0 /* Build configuration list for PBXNativeTarget "TiCardscanner" */;
+			buildPhases = (
+				DB52E2251E9CCD7000AAAEE0 /* Sources */,
+				DB52E2261E9CCD7000AAAEE0 /* Frameworks */,
+				DB52E2271E9CCD7000AAAEE0 /* Headers */,
+				DB52E2281E9CCD7000AAAEE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBB66220208481A400EAD6D9 /* PBXTargetDependency */,
+			);
+			name = TiCardscanner;
+			productName = TiCardscanner;
+			productReference = DB52E22A1E9CCD7000AAAEE0 /* TiCardscanner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB52E2211E9CCD7000AAAEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					DB52E2291E9CCD7000AAAEE0 = {
+						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0940;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DB52E2241E9CCD7000AAAEE0 /* Build configuration list for PBXProject "ti.cardscanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB52E2201E9CCD7000AAAEE0;
+			productRefGroup = DB52E22B1E9CCD7000AAAEE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB52E2291E9CCD7000AAAEE0 /* TiCardscanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB52E2281E9CCD7000AAAEE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C079ED4288F04D000FA9329 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB52E2251E9CCD7000AAAEE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C079F1D288F056300FA9329 /* Observable.swift in Sources */,
+				2C079F0D288F056300FA9329 /* Associatable.swift in Sources */,
+				2C079ED2288F04D000FA9329 /* ScannedCardView.swift in Sources */,
+				2C079F09288F056300FA9329 /* WeakNonOptional.swift in Sources */,
+				2C079EFF288F056300FA9329 /* AxesSet.swift in Sources */,
+				2C079F0B288F056300FA9329 /* BasicUIActionHandler.swift in Sources */,
+				DB34CDE0207B998A005F8E8C /* TiCardscannerModuleAssets.m in Sources */,
+				2C079F11288F056300FA9329 /* CACornerMask.swift in Sources */,
+				2C079ED8288F04D000FA9329 /* CardCheck.swift in Sources */,
+				2C079F13288F056300FA9329 /* ResultExtensions.swift in Sources */,
+				2C079F08288F056300FA9329 /* ThreadSafe.swift in Sources */,
+				2C079F19288F056300FA9329 /* ParallelRequests.swift in Sources */,
+				2C079F01288F056300FA9329 /* PinningConstraintHelpers.swift in Sources */,
+				2C079F12288F056300FA9329 /* UIStackView.swift in Sources */,
+				2C079F0A288F056300FA9329 /* WeakClosure.swift in Sources */,
+				2C079F1E288F056300FA9329 /* ObserverSet.swift in Sources */,
+				2C079ECD288F04D000FA9329 /* SharkCardScanViewController.swift in Sources */,
+				2C079ED1288F04D000FA9329 /* CardScannerExtensions.swift in Sources */,
+				2C079ED6288F04D000FA9329 /* CardScanner.swift in Sources */,
+				2C079ECE288F04D000FA9329 /* CardScanViewModel.swift in Sources */,
+				2C079F14288F056300FA9329 /* CGSize.swift in Sources */,
+				2C079ED3288F04D000FA9329 /* LayoutContentView.swift in Sources */,
+				2C079F03288F056300FA9329 /* SizingConstraintHelpers.swift in Sources */,
+				2C079ECF288F04D000FA9329 /* CameraAccess.swift in Sources */,
+				2C079F1A288F056300FA9329 /* ParallelResultRequests.swift in Sources */,
+				2C079F10288F056300FA9329 /* UIView.swift in Sources */,
+				2C079F17288F056300FA9329 /* SequencedResultRequests.swift in Sources */,
+				2C079F18288F056300FA9329 /* AsyncRequest.swift in Sources */,
+				2C079F02288F056300FA9329 /* LayoutGuideSource.swift in Sources */,
+				2C079F0E288F056300FA9329 /* GenericArrayBuilder.swift in Sources */,
+				DB52E2431E9CD0F800AAAEE0 /* TiCardscannerModule.swift in Sources */,
+				2C079F15288F056300FA9329 /* OptionalExtensions.swift in Sources */,
+				2C079F04288F056300FA9329 /* WeakContainable.swift in Sources */,
+				2C079F07288F056300FA9329 /* NSRegularExpressionExtensions.swift in Sources */,
+				2C079F0C288F056300FA9329 /* ParameterErasure.swift in Sources */,
+				2C079ED0288F04D000FA9329 /* PixelBufferStream.swift in Sources */,
+				2C079ED5288F04D000FA9329 /* Styling.swift in Sources */,
+				2C079F05288F056300FA9329 /* Chainable.swift in Sources */,
+				2C079F00288F056300FA9329 /* UIStackViewConstructor.swift in Sources */,
+				2C079F0F288F056300FA9329 /* AdditiveArithmetic.swift in Sources */,
+				2C079F06288F056300FA9329 /* WriteSafe.swift in Sources */,
+				2C079F1C288F056300FA9329 /* ObservableExtensions.swift in Sources */,
+				2C079ED7288F04D000FA9329 /* DateExtensions.swift in Sources */,
+				2C079F16288F056300FA9329 /* UIEdgeInsets.swift in Sources */,
+				2C079F1B288F056300FA9329 /* RepeatingRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBB66220208481A400EAD6D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TitaniumKit;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DB52E2301E9CCD7000AAAEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DB52E2311E9CCD7000AAAEE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB52E2331E9CCD7000AAAEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TiCardscanner_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.ti.cardscanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Titanium";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+			};
+			name = Debug;
+		};
+		DB52E2341E9CCD7000AAAEE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TiCardscanner_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.ti.cardscanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Titanium";
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB52E2241E9CCD7000AAAEE0 /* Build configuration list for PBXProject "ti.cardscanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB52E2301E9CCD7000AAAEE0 /* Debug */,
+				DB52E2311E9CCD7000AAAEE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB52E2321E9CCD7000AAAEE0 /* Build configuration list for PBXNativeTarget "TiCardscanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB52E2331E9CCD7000AAAEE0 /* Debug */,
+				DB52E2341E9CCD7000AAAEE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB52E2211E9CCD7000AAAEE0 /* Project object */;
+}

@@ -1,0 +1,38 @@
+
+10.8.2022, 18:35:51
+
+Operating System
+  Name                        = macOS
+  Version                     = 12.5
+  Architecture                = 64bit
+  # CPUs                      = 12
+  Memory                      = 34359738368
+
+Node.js
+  Node.js Version             = 16.15.1
+  npm Version                 = 8.11.0
+
+Titanium CLI
+  CLI Version                 = 6.0.2
+
+Titanium SDK
+  SDK Version                 = 11.1.0
+  SDK Path                    = /Users/marcbender/Library/Application Support/Titanium/mobilesdk/osx/11.1.0
+  Target Platform             = android
+
+Command
+  /usr/local/bin/node /usr/local/bin/ti clean
+
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/.gradle
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/build
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/build.gradle
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/build_android.log
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/gradle
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/gradle.properties
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/gradlew
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/gradlew.bat
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/local.properties
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/module
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/settings.gradle
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/build/ti.constants.gradle
+[DEBUG]  Deleting /Users/marcbender/ti.cardscanner/android/dist

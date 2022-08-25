@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: arm64 x86_64
+mac:false 
+description: ti.cardscanner
+author: Marc Bender
+license: Specify your license
+copyright: Copyright (c) 2022 by Your Company
+
+# these should not be edited
+name: ti.cardscanner
+moduleid: ti.cardscanner
+guid: 29c40796-46c0-41e2-9691-9286ae0d9d30
+platform: iphone
+minsdk: 10.1.0

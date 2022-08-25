@@ -1,0 +1,11 @@
+framework module TiCardscanner {
+  umbrella header "TiCardscanner.h"
+
+  export *
+  module * { export * }
+}
+
+module TiCardscanner.Swift {
+    header "TiCardscanner-Swift.h"
+    requires objc
+}
